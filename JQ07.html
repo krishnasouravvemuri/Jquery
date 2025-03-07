@@ -3,9 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>jquery #7 - Show() function</title>
+    <script src = 'https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js'></script>
+    <script>
+
+        $(document).ready(function(){
+            $('.bt1').click(function(){
+                $('p').show(300)  // Takes these parameters : speed(in ms / slow / fast) , easing , callback
+            });
+        });
+
+    </script>
 </head>
 <body>
-    
+    <button class = "bt1">
+        Click me !
+    </button>
+
+    <p style = "display: none;">This is the text!</p>
 </body>
 </html>
