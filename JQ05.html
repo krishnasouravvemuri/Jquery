@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>jquery #3 - No call back function</title>
+    <title>jquery #5 - Hide() with no call back function</title>
 
     <script src = 'https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js'></script>
 
@@ -11,7 +11,7 @@
 
         $(document).ready(function(){
             $('button').click(function(){
-                $('p').hide(1000)
+                $('p').hide(1000)  // Hide takes these parameters : speed(in ms / slow / fast) , easing , callback
                 alert("Paragraph is hidden !")
             });
         });
