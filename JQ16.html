@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery #16 - chaining</title>
+    <script src = 'https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js'></script>
+    <script>
+
+        $(document).ready(function(){
+            $('.bt1').click(function(){
+                $('p').slideUp(300).slideDown(300).css('color' , 'blue') //Chaninig 
+            });
+        });
+
+    </script>
+</head>
+<body>
+    <p>This is the text!</p>
+
+    <button class = "bt1">
+        Click me !
+    </button>
+</body>
+</html>
