@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery #10 - FadeOut() function</title>
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#bt1").click(function(){
+                $('#div1').fadeOut() // Takes speed (in ms , fast , slow) , ease , callback functions as arguments
+                $('#div2').fadeOut('ease')
+                $('#div3').fadeOut(1000)
+            })
+        })
+    </script>
+    <style>
+        #div1{
+            background-color: red;
+            width : 140px;
+            height: 140px;
+        }
+        #div2{
+            background-color: blue;
+            width : 140px;
+            height: 140px;
+        }
+        #div3{
+            background-color: green;
+            width : 140px;
+            height: 140px;
+        }
+    </style>
+</head>
+<body>
+    <button id = "bt1">Fade Out</button><br><br>
+    <div id = "div1"></div><br><br>
+    <div id = "div2"></div><br><br>
+    <div id = "div3"></div><br>
+</body>
+</html>
