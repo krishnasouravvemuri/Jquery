@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery #9 - FadeIn() function</title>
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#bt1").click(function(){
+                $('#div1').fadeIn() // Takes speed (in ms , fast , slow) , ease , callback functions as arguments
+                $('#div2').fadeIn('ease')
+                $('#div3').fadeIn(1000)
+            })
+        })
+    </script>
+    <style>
+        #div1{
+            background-color: red;
+            width : 140px;
+            height: 140px;
+            display: none;
+        }
+        #div2{
+            background-color: blue;
+            width : 140px;
+            height: 140px;
+            display: none;
+        }
+        #div3{
+            background-color: green;
+            width : 140px;
+            height: 140px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <button id = "bt1">Fade in</button><br><br>
+    <div id = "div1"></div><br><br>
+    <div id = "div2"></div><br><br>
+    <div id = "div3"></div><br>
+</body>
+</html>
