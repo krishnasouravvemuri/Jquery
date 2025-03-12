@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery #19 - Text function</title>
+    <script src = 'https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js'></script>
+    <style>
+        p{
+            color : blue;
+            margin : 8px;
+        }
+
+        b{
+            color : red;
+        }
+    </style>
+</head>
+<body>
+        <p>This is <b>Red !</b></p>
+        <p></p>
+
+        <script>
+            x = $('p:first').text() // only text is copied into 'x'
+            $('p:last').html(x)
+        </script>
+</body>
+</html>
