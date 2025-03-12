@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery #17 - Delay</title>
+    <script src = 'https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js'></script>
+    <script>
+        $(document).ready(function(){
+            $('button').click(function(){
+                $('.d1').delay('slow').fadeIn();
+            });
+        });
+    </script>
+    <style>
+        body{
+            background-color: black;
+            color : white;
+        }
+        .d1{
+            width : 180px;
+            height : auto;
+            margin-top : 20px;
+            border:white 2px solid;
+            display: none;
+        }
+        p{
+            margin-left : 10px;
+            margin-right : 10px;
+        }
+    </style>
+</head>
+<body>
+    <button>Click Me !</button>
+    <div class="d1"><p>This displays slowly as we added delay() function</p></div>
+</body>
+</html>
