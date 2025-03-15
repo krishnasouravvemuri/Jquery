@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery #28 - unbind() function</title>
+    <style>
+        body{
+            background-color : black;
+            color : white;
+        }
+    </style>
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("h2").bind('mouseover' , function(){
+                $(this).css({"background-color" : "white" , "color" : "black"}).text("Hovered !")
+            })
+            $("button").click(function(){
+                $("h2").unbind("mouseover")
+            })
+        })
+    </script>
+    <body>
+        <h2>Hover over me !</h2>
+        <button>UnBind</button>
+        <h2>Hover over me !</h2>
+
+    </body>
