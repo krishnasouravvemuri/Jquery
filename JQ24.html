@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery #23 - jquery Css , Multiple parameters</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        body{
+            background-color: black;
+            color : white;
+        }
+        div{
+            border : 2px solid white;
+            width : 200px;
+            height : 200px;
+        }
+        button:hover{
+            background-color: #333;
+        }
+        p{
+            font-size : 25px;
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            $("#red").click(function(){
+                $("div").css({"background-color" : "red" , "color" : "green"})
+            })
+            $("#green").click(function(){
+                $("div").css({"background-color" : "green" , "color" : "blue"})
+            })
+            $("#blue").click(function(){
+                $("div").css({"background-color" : "blue" , "color" : "red"})
+            })
+        })
+    </script>
+</head>
+<body>
+    <button id = 'red'>Red</button>
+    <button id = 'green'>Green</button>
+    <button id = 'blue'>Blue</button>
+    <div>
+        <p><b>This is the text !</b></p>
+    </div>
+</body>
+</html>
