@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery #31 - select() function</title>
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        body{
+            background-color: black;
+            color : white;
+        }
+    </style><script>
+        $(document).ready(function(){
+            $('input').select(function(){
+                $('label').html("<p><b> Some part of the text is selected </b></p>").css("font-size" , "30px").fadeIn(1200).fadeOut(1200)
+            });
+        });
+    </script>
+</head>
+<body>
+    <input type = "text" value = "select some text">
+    <label ></label>
+</body>
+</html>
