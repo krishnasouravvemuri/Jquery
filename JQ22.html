@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery #22 - val() function - Multiple Value</title>
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <select id = "selected" multiple = "multiple">
+        <option>Val 1</option>
+        <option>Val 2</option>
+        <option>Val 3</option>
+    </select>
+    <p></p>
+    <script>
+        displayvals = () =>{
+            x = $("#selected").val() 
+            $('p').html('<b>Value is : </b>' + x.join(','))
+        }
+        $('#selected').change(displayvals)
+        displayvals()
+    </script>
+</body>
+</html>
