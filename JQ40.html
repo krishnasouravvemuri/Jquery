@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery #40 - delegate()</title> 
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        body{
+            background-color: black;
+        }
+        p{
+            background-color: yellow;
+            font-weight : bold;
+            cursor : pointer;
+            padding : 5px;
+        }
+        p.over{
+            background-color : #ccc;
+        }
+    </style>
+</head>
+<body>
+    <p>This is a single paragraph !</p>
+    <script>
+        $("body").delegate('p' , "click" , function(){ // Very useful and important function
+            $(this).after("<p>click for next paragraph ! </p>")
+        })
+    </script>
+</body>
+</html>
