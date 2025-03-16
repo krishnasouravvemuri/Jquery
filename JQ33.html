@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery #33 - submit() function</title>
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        p{
+          margin : 0;
+          color : blue
+        }
+        div , p{
+           margin-left : 10px; 
+        }
+        span{
+            color : red;
+        }
+    </style>
+</head>
+<body>
+    <p>Type JAVA to submit the form</p>
+    <form>
+        <div>
+            <input type = 'text'>
+            <input type = 'submit'>
+        </div>
+    </form>
+    <span></span>
+    <script>
+        $('form').submit(function(){
+            if($('input:first').val() === 'JAVA'){
+                $("span").text("Form Submitted Successfully !").show().fadeOut(2000)
+            }
+            else{
+                $("span").text("Invalid!").show().fadeOut(2000)
+            }
+
+            event.preventDefault()
+        });
+    </script>
+</body>
+</html>
