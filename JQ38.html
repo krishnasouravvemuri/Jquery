@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery #38 - mouseup()</title>
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        body{
+            background-color : black;
+            color : white;
+        }
+        h1{
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            $("h1").mouseup(function(){ // Occours when leftmouse button is released after clicking
+                $("div").html("<p>The mouseup event is triggered </p>").fadeOut(2000)
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Click me !</h1>
+    <div></div>
+</body>
+</html>
