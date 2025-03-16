@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery #35 - mouseenter() and mouseleave()</title>
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        body{
+            background-color : black;
+            color : white;
+        }
+        div{
+            border : 2.5px white solid;
+            height: 150px;
+            width: 150px;
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            $("button").mouseenter(function(){
+                $("div").css("background-color" , "blue")
+            });
+            $("button").mouseleave(function(){
+                $("div").css("background-color" , "green")
+            });
+        });
+    </script>
+</head>
+<body>
+    <button>Hover Over Me !</button><br><br>
+    <div></div>
+</body>
+</html>
