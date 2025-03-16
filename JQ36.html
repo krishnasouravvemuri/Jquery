@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery #36 - hover()</title>
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        body{
+            background-color : black;
+            color : white;
+        }
+        div{
+            border : 2.5px white solid;
+            height: 150px;
+            width: 150px;
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            $("button").hover(function(){
+                $("div").css({"background-color" : "blue"})
+                },
+                function(){
+                    $("div").css({"background-color" : "black"})
+                }
+            );            
+        });
+    </script>
+</head>
+<body>
+    <button>Hover Over Me !</button><br><br>
+    <div></div>
+</body>
+</html>
