@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery #32 - change() function</title>
+    <script src = 'https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js'></script>
+    <style>
+        body{
+            background-color : black;
+            color : white;
+        }
+        div{
+            border : 4px solid white;
+            display: none;
+            white-space: nowrap;
+            padding: 10px;
+            min-width: 0px;
+        }
+    </style>
+</head>
+<body>
+    <select id = 'se' name = 'colours'>
+        <option>red</option>
+        <option>blue</option>
+        <option>yellow</option>
+        <option>pink</option>
+        <option>violet</option>
+        <option>brown</option>
+    </select><br><br><br>
+    <div></div>
+    <script>
+        $(document).ready(function(){
+            $('#se').change(function(){
+                $("div").html('<p><b>You have selected : ' + document.getElementById('se').value + "</b></p>").css("display" , "inline-block")
+            });
+        });
+    </script>
+</body>
+</html>
